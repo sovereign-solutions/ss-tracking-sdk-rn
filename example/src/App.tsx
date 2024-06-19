@@ -17,15 +17,13 @@ export default function App() {
   const [trackingRunning, setIsTracking] = React.useState<boolean>();
 
   React.useEffect(() => {
+    initialTrackingSDK();
     getIsTracking();
   }, []);
   const getIsTracking = async () => {
     setIsTracking(await isTrackingSdk());
   };
-  const startTrackingHandler = () => {
-    // check permssion android.permission.ACCESS_BACKGROUND_LOCATION grant before start tracking.
-    // tracking will not start if android.permission.ACCESS_BACKGROUND_LOCATION persmission is not granted
-
+  const initialTrackingSDK = () => {
     const username = 'sales_testing_1';
     const token =
       'bearer pJDEr8Q-wfmzZVFlt6WJxqQEoqjbDyMzv3x_NKkj1Oouc24eQKGsH4bVVveWSji4dpY6WTBxjg4VutgvmuNpHnVu1gyn0g8oMXQ7X-vu9SiAHF9eX4T0msUgkPvXppqxjWm2DQzicTRVC2qN3uYEDW6CsFbhqFVe4wakbU5NXgYN2qBIN2zYXkvyfObBDijSIUA9E30C992-ffA3HItmWV51FRKlX-R6bsIqsM1CePITQB0FOzBXPPH0NmjCp6G69h-Gi9OKvGmCYHcwcB3K_OstNnIZ9nueORJSbKtEt4McJ5ywsOiUzs_E3DdehN4-HukJTwIeOw7-3C4gP9FCB7p2UUQc3ZoKIs3V-2KvkcVC2yaq1F5PRafzrLQ5YItT95uK8PTEzVEMyGOeO3wmL3yvCekFegKWP2SFNdl6H6Yzf5mDt01BRW67Yvhrc-wBtMiPRa11JsRbi4kX_RGcq_0Aoxg';
@@ -58,6 +56,12 @@ export default function App() {
     setLocationDistanceFilter(0);
 
     setTrackerId(DeviceInfo.getUniqueId() + '@' + username);
+  }
+  const startTrackingHandler = () => {
+    // check permssion android.permission.ACCESS_BACKGROUND_LOCATION grant before start tracking.
+    // tracking will not start if android.permission.ACCESS_BACKGROUND_LOCATION persmission is not granted
+
+    
     startTracking();
     getIsTracking();
   };
