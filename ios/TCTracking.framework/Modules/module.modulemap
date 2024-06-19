@@ -1,0 +1,11 @@
+framework module TCTracking {
+  umbrella header "TCTracking-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module TCTracking.Swift {
+  header "TCTracking-Swift.h"
+  requires objc
+}

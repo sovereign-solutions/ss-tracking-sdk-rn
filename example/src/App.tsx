@@ -1,10 +1,9 @@
 import * as React from 'react';
 import DeviceInfo from 'react-native-device-info';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, Switch } from 'react-native';
 import {
   initTracking,
   isTrackingSdk,
-  multiply,
   setAuthenInfo,
   setLocationDistanceFilter,
   setLocationUpdateFrequency,
@@ -70,6 +69,16 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Tracking: {trackingRunning ? 'yes' : 'no'}</Text>
+      <Switch
+        value={trackingRunning}
+        onValueChange={() => {
+          if (!trackingRunning) {
+            startTrackingHandler();
+          } else {
+            stopTrackingHandler();
+          }
+        }}
+      />
       <Button title="Start tracking" onPress={() => startTrackingHandler()} />
       <Button title="Pause tracking" onPress={() => stopTrackingHandler()} />
     </View>

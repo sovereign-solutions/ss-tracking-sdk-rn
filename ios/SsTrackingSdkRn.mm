@@ -42,15 +42,11 @@ RCT_EXTERN_METHOD(
 
 RCT_EXTERN_METHOD(setUseMotionSensor:(BOOL)enable)
 
-RCT_EXTERN_METHOD(requestPermissionAndStartMotionActivitySensor)
-
 RCT_EXTERN_METHOD(motionActivityAuthorizationStatus:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(getLastKnownLocation:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
-
-RCT_EXTERN_METHOD(sendOfflineWP:(NSString)user url:(NSString)url)
 
 RCT_EXTERN_METHOD(getMetadata:(RCTPromiseResolveBlock)resolve
                   withRejecter:(RCTPromiseRejectBlock)reject)

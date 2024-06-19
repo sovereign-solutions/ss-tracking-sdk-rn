@@ -1,5 +1,6 @@
 import React
 import CoreMotion
+import TCTracking
 @objc(SsTrackingSdkRn)
 class SsTrackingSdkRn: RCTEventEmitter, OnResultListener {
   private var emitterEnable = false
@@ -85,11 +86,6 @@ class SsTrackingSdkRn: RCTEventEmitter, OnResultListener {
       SVTrackingManager.shareInstance.setUseMotionSensor(enable: enable)
   }
   
-  @objc(requestPermissionAndStartMotionActivitySensor)
-  func requestPermissionAndStartMotionActivitySensor() -> Void {
-      SVTrackingManager.shareInstance.startMotionActivitySensor()
-  }
-  
   @available(iOS 11.0, *)
   @objc(motionActivityAuthorizationStatus:withRejecter:)
   func motionActivityAuthorizationStatus(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
@@ -124,11 +120,6 @@ class SsTrackingSdkRn: RCTEventEmitter, OnResultListener {
       } else {
           resolve("")
       }
-  }
-  
-  @objc(sendOfflineWP:url:)
-  func sendOfflineWP(user: String, url: String) -> Void {
-      SVTrackingManager.shareInstance.sendOfflineWP()
   }
   
   @objc(getMetadata:withRejecter:)

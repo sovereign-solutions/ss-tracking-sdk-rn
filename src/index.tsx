@@ -49,7 +49,7 @@ export function initTracking(
       trackingUrl,
       token,
       driver,
-      trackingStatus
+      trackingStatus + ''
     );
     SsTrackingSdkRn.setTrackingStatus(trackingStatus);
     SsTrackingSdkRn.setUseMotionSensor(useActivityRegconition === true);
@@ -180,12 +180,6 @@ export function isIgnoreBatteryOptimization(): boolean {
 export function requestIgnoreBatteryOptimization(): void {
   if (Platform.OS === 'android') {
     SsTrackingSdkRn.requestIgnoreBatteryOptimization();
-  }
-}
-
-export function requestPermissionMotionActivity(): void {
-  if (Platform.OS === 'ios') {
-    SsTrackingSdkRn.requestPermissionAndStartMotionActivitySensor();
   }
 }
 
@@ -347,13 +341,5 @@ export function getEMetaData(): Promise<string> {
     return SsTrackingSdkRn.getEMetaData();
   } else {
     return SsTrackingSdkRn.getMetadata();
-  }
-}
-
-export function sendOfflineWP(user: string, url: string) {
-  if (Platform.OS === 'android') {
-    SsTrackingSdkRn.pushOfflineData(user, url);
-  } else {
-    SsTrackingSdkRn.sendOfflineWP(user, url);
   }
 }
