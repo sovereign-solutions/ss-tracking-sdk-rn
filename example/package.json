@@ -12,7 +12,7 @@
     "react": "18.2.0",
     "react-native": "0.66.5",
     "react-native-device-info": "8.3.2",
-    "ss-tracking-sdk-rn": "git://github.com/phutttc/ss-tracking-sdk-rn.git"
+    "ss-tracking-sdk-rn": "git://github.com/sovereign-solutions/ss-tracking-sdk-rn.git"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

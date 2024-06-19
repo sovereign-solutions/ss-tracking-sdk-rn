@@ -12675,13 +12675,13 @@ __metadata:
     react: 18.2.0
     react-native: 0.66.5
     react-native-device-info: 8.3.2
-    ss-tracking-sdk-rn: "git://github.com/phutttc/ss-tracking-sdk-rn.git"
+    ss-tracking-sdk-rn: "git://github.com/sovereign-solutions/ss-tracking-sdk-rn.git"
   languageName: unknown
   linkType: soft
 
-"ss-tracking-sdk-rn@git://github.com/phutttc/ss-tracking-sdk-rn.git":
+"ss-tracking-sdk-rn@git://github.com/sovereign-solutions/ss-tracking-sdk-rn.git":
   version: 0.1.0
-  resolution: "ss-tracking-sdk-rn@https://github.com/phutttc/ss-tracking-sdk-rn.git#commit=3da865f559b93b5af64da40e9f936642d7ce58dd"
+  resolution: "ss-tracking-sdk-rn@https://github.com/sovereign-solutions/ss-tracking-sdk-rn.git#commit=83621124afb2f78cfc1697bd17ee66ce09748b99"
   peerDependencies:
     react: "*"
     react-native: "*"
