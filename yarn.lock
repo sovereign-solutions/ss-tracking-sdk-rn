@@ -12675,8 +12675,19 @@ __metadata:
     react: 18.2.0
     react-native: 0.66.5
     react-native-device-info: 8.3.2
+    ss-tracking-sdk-rn: "git://github.com/phutttc/ss-tracking-sdk-rn.git"
   languageName: unknown
   linkType: soft
+
+"ss-tracking-sdk-rn@git://github.com/phutttc/ss-tracking-sdk-rn.git":
+  version: 0.1.0
+  resolution: "ss-tracking-sdk-rn@https://github.com/phutttc/ss-tracking-sdk-rn.git#commit=3da865f559b93b5af64da40e9f936642d7ce58dd"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: def87e9d99887aa4367a8f5faeb5ac7a118a8cc45e49b8948784c0bd254a429940531b77cd54adbee7139736bb34dc65d54f0fb0b6087fdffc17d48802ec1c05
+  languageName: node
+  linkType: hard
 
 "ss-tracking-sdk-rn@workspace:.":
   version: 0.0.0-use.local
